@@ -4,40 +4,48 @@ title: Как пользоваться OpenFlow
 permalink: /guide.html
 ---
 
+[English guide](guide-en.html)
+
 # Как пользоваться OpenFlow
 
-OpenFlow — бесплатная русскоязычная Community beta для Figma Design. Из-за
-ограниченной серверной квоты AI generation доступна по персональному revocable
-invite token. Запросить token может любой пользователь Community через
-[Telegram @pnklrd](https://t.me/pnklrd).
+OpenFlow — бесплатная Mermaid-first Community beta для Figma Design. Основной
+сценарий работает локально без регистрации, invite key и сетевых запросов.
 
-## Первый запуск
+## Mermaid: основной сценарий
 
-1. Установите OpenFlow из Figma Community и откройте его в Figma Design.
-2. На вкладке **Настройки** вставьте invite token и нажмите
-   **Проверить подключение**.
-3. Перейдите в **Чат**, опишите happy path и две-три короткие развилки или
-   воспользуйтесь кнопкой **Вставить пример**.
-4. Нажмите **Создать preview** и проверьте узлы, переходы и предупреждения.
-5. Нажмите **Добавить в Figma**. До этого шага canvas не изменяется.
+1. Откройте OpenFlow: вкладка **Mermaid** выбрана по умолчанию.
+2. Вставьте поддерживаемый Mermaid source или нажмите **Вставить пример**.
+3. Нажмите **Предпросмотр** и проверьте узлы, переходы и предупреждения.
+4. Нажмите **Добавить в Figma**. До этого canvas не изменяется.
+5. Для обновления выделите созданную OpenFlow group, снова откройте plugin,
+   измените Mermaid и примените изменения.
 
-## Изменение flow
+Изменённый source нужно снова проверить. Пока он dirty, применение и AI-запрос
+заблокированы, чтобы не использовать устаревший FlowSpec.
 
-Выделите созданную OpenFlow group и снова откройте plugin. Напишите follow-up,
-создайте новый preview и примените его. OpenFlow старается сохранить stable nodes,
-их ручные позиции и стили. Кнопка reset positions полностью перестраивает схему
-без ручных привязок после явного подтверждения.
+## API: дополнительная AI beta
 
-Вкладка **Mermaid** поддерживает ограниченный import/export. Chat рассчитан на
-flows до 15 nodes и 30 transitions; Source и сохранённый документ — до 80/160.
-Большой процесс лучше разделить на несколько схем.
+Откройте **API**, вставьте revocable OpenFlow invite key и нажмите **Проверить
+ключ**. Это не личный provider key: OpenCode credential остаётся только на relay.
+Принятый key хранится только в Figma `clientStorage` на этом устройстве.
 
-## Данные и ограничения
+После generation OpenFlow автоматически вернёт вас в Mermaid. Проверьте source и
+предпросмотр, затем явно примените схему. API рассчитан на flow до 15 nodes и 30
+transitions; Mermaid/document — до 80/160. Запросить бесплатный персональный key
+может любой пользователь Community через [Telegram @pnklrd](https://t.me/pnklrd).
 
-OpenFlow отправляет только введённый prompt, ограниченную историю OpenFlow chat и
-FlowSpec явно выбранной managed group. Не отправляйте secrets и чувствительные
-персональные данные. Подробности: [Privacy Policy](privacy.html) и
-[Beta Terms](terms.html).
+## Блоки, ветвления и ошибки
 
-Если connection test или generation не работает, пришлите безопасный текст ошибки
-в [Telegram @pnklrd](https://t.me/pnklrd). Не присылайте invite token.
+Встроенная кнопка `?` объясняет все восемь kinds и stable IDs. Только `decision`
+и `decisionUser` могут иметь 2–3 подписанных исхода. `end` и `error` терминальны.
+Исправимая ошибка — `card`/`subtle`, а последующий пользовательский выбор —
+отдельный `decisionUser`. Кнопка **Вставить легенду в Figma** создаёт обычную
+редактируемую group без managed-flow markers.
+
+В меню выбранной схемы находятся **Сбросить ручные позиции** и **Очистить историю
+API**. Интерфейс и новая AI generation поддерживают RU/EN; переключение языка не
+переводит существующие diagram labels или chat.
+
+Не отправляйте secrets или чувствительные персональные данные. Подробнее:
+[Privacy Policy](privacy.html) и [Beta Terms](terms.html). Ошибки присылайте без
+invite key в [Telegram @pnklrd](https://t.me/pnklrd).

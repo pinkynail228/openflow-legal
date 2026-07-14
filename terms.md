@@ -8,15 +8,16 @@ permalink: /terms.html
 
 ## Beta status
 
-OpenFlow `0.1.0-beta.1` предоставляется как бесплатная Community beta с доступом
-к generation по revocable invite token. Запросить персональный token может любой
+OpenFlow `0.1.0-beta.2` предоставляется как бесплатная Mermaid-first Community
+beta. Локальный Mermaid workflow доступен без регистрации. Дополнительная AI
+generation использует revocable invite key; запросить персональный key может любой
 пользователь Community через канал поддержки. Это не production service и не
 гарантия непрерывной доступности. Функции, limits, модель и relay могут изменяться
 по мере beta-тестирования.
 
 ## Invite tokens и limits
 
-Invite token предназначен для получателя и может быть отозван в любое время.
+Invite key предназначен для получателя и может быть отозван в любое время.
 Пользователь не должен публиковать, продавать или передавать token третьим лицам.
 На token действуют anti-abuse limits, включая максимум 100 upstream requests за
 UTC-day; repair и format fallback также расходуют этот лимит.
@@ -30,8 +31,8 @@ OpenFlow предназначен для проектирования user flows
 
 ## Результаты generation
 
-AI output может быть неполным или ошибочным. Пользователь обязан проверить preview
-до Apply и самостоятельно отвечает за итоговую схему. OpenFlow создаёт обычные
+AI output и Mermaid source могут быть неполными или ошибочными. Пользователь обязан
+проверить предпросмотр до применения и самостоятельно отвечает за итоговую схему. OpenFlow создаёт обычные
 редактируемые Figma shapes; применение схемы всегда является явным действием.
 
 ## Availability и termination

@@ -24,13 +24,14 @@ document contents или персональные данные в открыто
 ## Security model beta
 
 - Figma network access ограничен одним HTTPS relay domain.
+- Mermaid authoring, Preview, Apply и legend не требуют сетевого запроса.
 - Relay фиксирует upstream и model и не принимает client-supplied Authorization
   или upstream URL.
 - Provider key хранится вне Figma как system credential.
 - Invite tokens проверяются по SHA-256 hash и могут быть отозваны.
 - Requests ограничены по размеру, частоте, concurrency и daily quota.
 - Prompt и response bodies не сохраняются и не логируются relay.
-- UI и main thread независимо проверяют semantic и geometry payload до document
-  mutation; update выполняется через atomic group replacement.
+- UI и main thread независимо проверяют FlowSpec/placed payload и geometry до
+  document mutation; update выполняется через atomic group replacement.
 
 OpenFlow beta не заявляет SOC 2, ISO 27001 или иную независимую сертификацию.
