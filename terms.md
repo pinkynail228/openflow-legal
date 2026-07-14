@@ -8,9 +8,11 @@ permalink: /terms.html
 
 ## Beta status
 
-OpenFlow `0.1.0-beta.1` предоставляется как бесплатная invite-only beta. Это не
-production service и не гарантия непрерывной доступности. Функции, limits, модель
-и relay могут изменяться по мере beta-тестирования.
+OpenFlow `0.1.0-beta.1` предоставляется как бесплатная Community beta с доступом
+к generation по revocable invite token. Запросить персональный token может любой
+пользователь Community через канал поддержки. Это не production service и не
+гарантия непрерывной доступности. Функции, limits, модель и relay могут изменяться
+по мере beta-тестирования.
 
 ## Invite tokens и limits
 
